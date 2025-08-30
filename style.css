@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://yourcdn.com/20-kopeek.css");
 
 * {
   margin: 0;
@@ -14,6 +15,7 @@ body {
   --logo-text-color: rgb(255, 255, 255);
   --black-text-color: black;
   --font-family-roboto: "Roboto", sans-serif;
+  --kopeek-font: "20KopeekBook", sans-serif;
   --blue-color-hover: rgba(43, 89, 195, 1);
 }
 
@@ -712,4 +714,195 @@ body {
     background-size: cover;
     height: 80vh;
   }
+}
+
+.gallery-section {
+  margin-top: 100px;
+}
+
+.amperia-text {
+  display: flex;
+  gap: 80px;
+  margin-top: 20px;
+}
+
+.lifecare-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.amperia-text h2 {
+  font-size: 55px;
+  font-family: var(--kopeek-font);
+  font-weight: 300;
+}
+
+.amperia-text a {
+  border-radius: 40px;
+  padding: 20px 40px;
+  border: solid 1px black;
+  transition: all linear 0.3s;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+
+.amperia-text a:hover {
+  transform: scale(1.05);
+}
+
+.amperia-info {
+  margin-top: 16px;
+  line-height: 25px;
+}
+
+.lifecare-img {
+  margin-top: 30px;
+}
+
+.more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-btn button {
+  background-color: var(--blue-color-hover);
+  padding: 23px 47px;
+  border: none;
+  border-radius: 40px;
+  color: var(--logo-text-color);
+  font-family: var(--font-family-roboto);
+  font-size: 14px;
+  margin-top: 30px;
+  transition: all linear 0.2s;
+  cursor: pointer;
+}
+
+.more-btn button:hover {
+  transform: scale(1.05);
+  background-color: var(--logo-text-color);
+  color: var(--blue-color-hover);
+  border: 1px solid var(--blue-color-hover);
+}
+
+.gift {
+  margin-top: 80px;
+}
+
+.gift-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.gift-text h2 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.goylayd-gift {
+  display: flex;
+  gap: 20px;
+}
+
+.goylayd-gift h3 {
+  font-size: 26px;
+  font-family: var(--kopeek-font);
+}
+
+.box-gift p {
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.box-gift {
+  width: 460px;
+  height: 230px;
+  padding: 20px;
+  transition: all linear 0.3s;
+  border-radius: 8px;
+}
+
+.box-gift:hover {
+  background-color: var(--blue-color-hover);
+  color: white;
+}
+
+.box-gift-1 {
+  width: 460px;
+  height: 200px;
+  padding: 20px;
+  transition: all linear 0.3s;
+  border-radius: 8px;
+}
+
+.box-gift-1:hover {
+  background-color: var(--blue-color-hover);
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .amperia-text {
+    gap: 30px;
+    text-align: start;
+  }
+
+  .amperia-text h2 {
+    font-size: 40px;
+  }
+
+  .amperia-text a {
+    padding: 15px 30px;
+    font-size: 13px;
+    margin: 0 auto;
+  }
+
+  .lifecare-img {
+    margin-top: 20px;
+  }
+
+  .more-btn button {
+    padding: 18px 36px;
+    font-size: 13px;
+  }
+}
+.goylayd-gift {
+  flex-direction: column; /* stack image and text vertically */
+  align-items: center;
+  text-align: center;
+}
+
+.gift-img img {
+  max-width: 250px; /* keep image smaller */
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.goylayd-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-gift,
+.box-gift-1 {
+  width: 100%; /* take full width */
+  height: auto; /* adjust height automatically */
+  text-align: left; /* optional: keep text aligned left */
+}
+
+.box-gift h3 {
+  font-size: 22px;
+}
+
+.box-gift p,
+.box-gift-1 span {
+  font-size: 15px;
+  line-height: 1.5;
 }
