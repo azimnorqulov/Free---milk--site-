@@ -728,7 +728,7 @@ body {
 
 .lifecare-img img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .amperia-text h2 {
@@ -761,7 +761,7 @@ body {
 }
 
 .lifecare-img {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .more-btn {
@@ -848,6 +848,12 @@ body {
 }
 
 @media (max-width: 992px) {
+  .gift {
+    display: none;
+}
+}
+
+@media (max-width: 992px) {
   .amperia-text {
     gap: 30px;
     text-align: start;
@@ -860,7 +866,6 @@ body {
   .amperia-text a {
     padding: 15px 30px;
     font-size: 13px;
-    margin: 0 auto;
   }
 
   .lifecare-img {
@@ -868,41 +873,167 @@ body {
   }
 
   .more-btn button {
-    padding: 18px 36px;
     font-size: 13px;
   }
 }
-.goylayd-gift {
-  flex-direction: column; /* stack image and text vertically */
-  align-items: center;
-  text-align: center;
+
+
+.apply-sec {
+  margin-top: 70px;
 }
 
-.gift-img img {
-  max-width: 250px; /* keep image smaller */
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.goylayd-text {
+.apply-title {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.box-gift,
-.box-gift-1 {
-  width: 100%; /* take full width */
-  height: auto; /* adjust height automatically */
-  text-align: left; /* optional: keep text aligned left */
+.apply-title h2 {
+  font-size: 30px;
+  font-family: var(--kopeek-font);
+  font-weight: 300;
 }
 
-.box-gift h3 {
-  font-size: 22px;
+.apply-text {
+  margin-top: 15px;
 }
 
-.box-gift p,
-.box-gift-1 span {
-  font-size: 15px;
-  line-height: 1.5;
+.apply-text p {
+  font-size: 20px;
+  font-weight: 200;
+  font-family: var(--kopeek-font);
+}
+
+.inputs-2 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* checkbox */
+.cl-checkbox {
+ position: relative;
+ display: inline-block;
+}
+
+.cl-checkbox > input {
+ appearance: none;
+ -moz-appearance: none;
+ -webkit-appearance: none;
+ z-index: -1;
+ position: absolute;
+ left: -10px;
+ top: -8px;
+ display: block;
+ margin: 0;
+ border-radius: 50%;
+ width: 40px;
+ height: 40px;
+ background-color: rgba(0, 0, 0, 0.6);
+ box-shadow: none;
+ outline: none;
+ opacity: 0;
+ transform: scale(1);
+ pointer-events: none;
+ transition: opacity 0.3s, transform 0.2s;
+}
+
+.cl-checkbox > span {
+ display: inline-block;
+ width: 100%;
+ cursor: pointer;
+}
+
+.cl-checkbox > span::before {
+ content: "";
+ display: inline-block;
+ box-sizing: border-box;
+ margin: 3px 11px 3px 1px;
+ border: solid 2px;
+ border-color: rgba(0, 0, 0, 0.6);
+ border-radius: 2px;
+ width: 18px;
+ height: 18px;
+ vertical-align: top;
+ transition: border-color 0.2s, background-color 0.2s;
+}
+
+.cl-checkbox > span::after {
+ content: "";
+ display: block;
+ position: absolute;
+ top: 3px;
+ left: 1px;
+ width: 10px;
+ height: 5px;
+ border: solid 2px transparent;
+ border-right: none;
+ border-top: none;
+ transform: translate(3px, 4px) rotate(-45deg);
+}
+
+.cl-checkbox > input:checked,
+.cl-checkbox > input:indeterminate {
+ background-color: #018786;
+}
+
+.cl-checkbox > input:checked + span::before,
+.cl-checkbox > input:indeterminate + span::before {
+ border-color: #018786;
+ background-color: #018786;
+}
+
+.cl-checkbox > input:checked + span::after,
+.cl-checkbox > input:indeterminate + span::after {
+ border-color: #fff;
+}
+
+.cl-checkbox > input:indeterminate + span::after {
+ border-left: none;
+ transform: translate(4px, 3px);
+}
+
+.cl-checkbox:hover > input {
+ opacity: 0.04;
+}
+
+.cl-checkbox > input:focus {
+ opacity: 0.12;
+}
+
+.cl-checkbox:hover > input:focus {
+ opacity: 0.16;
+}
+
+.cl-checkbox > input:active {
+ opacity: 1;
+ transform: scale(0);
+ transition: transform 0s, opacity 0s;
+}
+
+.cl-checkbox > input:active + span::before {
+ border-color: #85b8b7;
+}
+
+.cl-checkbox > input:checked:active + span::before {
+ border-color: transparent;
+ background-color: rgba(0, 0, 0, 0.6);
+}
+
+.cl-checkbox > input:disabled {
+ opacity: 0;
+}
+
+.cl-checkbox > input:disabled + span {
+ color: rgba(0, 0, 0, 0.38);
+ cursor: initial;
+}
+
+.cl-checkbox > input:disabled + span::before {
+ border-color: currentColor;
+}
+
+.cl-checkbox > input:checked:disabled + span::before,
+.cl-checkbox > input:indeterminate:disabled + span::before {
+ border-color: transparent;
+ background-color: currentColor;
 }
